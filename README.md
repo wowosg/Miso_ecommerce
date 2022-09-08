@@ -1,6 +1,7 @@
 https://ecommerce-sanity-sigma.vercel.app/
 
 這是一個利用Next.js 搭配 Sanity_studio 製作的購物車網站
+
 用CSS寫了一些簡單的動畫增加使用者體驗
 使用 Next.js 建構 File-based 路由，並用SSR、SSG的方式將 Sanity_studio 裡的資料渲染在頁面上
 避免傳遞參數過於複雜，利用useContext來管理狀態
