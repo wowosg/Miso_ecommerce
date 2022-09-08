@@ -1,34 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+https://ecommerce-sanity-sigma.vercel.app/
 
-## Getting Started
+這是一個利用Next.js 搭配 Sanity_studio 製作的購物車網站
+用CSS寫了一些簡單的動畫增加使用者體驗
+使用 Next.js 建構 File-based 路由，並用SSR、SSG的方式將 Sanity_studio 裡的資料渲染在頁面上
+避免傳遞參數過於複雜，利用useContext來管理狀態
+目前的功能有
+1.點擊商品進入動態配置路由的商品詳細頁面，點選數量加入購物車
+2.右上角的圖標開啟購物車欄，並可直接在已被加入至此的商品修改數量或直接刪除
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+最近正在嘗試利用Stripe來添加立即購買的功能，希望未來能把這個網站做得更全面
