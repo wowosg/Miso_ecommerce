@@ -83,7 +83,7 @@ const Cart = () => {
               <button
                 type='button'
                 className='btn'
-
+                style={{ marginTop: '0px' }}
               >
                 立即付款
               </button>
