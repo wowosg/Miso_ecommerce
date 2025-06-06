@@ -24,11 +24,13 @@ export const StateContext = ({ children }) => {
 
         if (checkProductInCart) {
             const updatedCartItems = cartItems.map((cartProduct) => {
-                // 跑迴圈直到找到相同id 才修改該數據
                 if (cartProduct._id === product._id) {
                     return {
-                        ...cartProduct, quantity: cartProduct.quantity + quantity
+                        ...cartProduct,
+                        quantity: cartProduct.quantity + quantity
                     }
+                } else {
+                    return cartProduct
                 }
             })
             setCartItems(updatedCartItems)
