@@ -1,19 +1,34 @@
 https://ecommerce-sanity-sigma.vercel.app/
 
-這是一個利用Next.js 搭配 Sanity_studio 製作的購物車網站
+這是一個使用 **Next.js** 搭配 **Sanity Studio** 製作的購物車網站，具備商品展示、購物車管理、後台內容維護等功能。
 
-Sanity能讓使用者更簡單的搭建資料庫，只要把schema寫好，便可直接於他們的頁面上直接管理網站後台創建Data
+## 說明
 
-用CSS寫了一些簡單的動畫增加使用者體驗
+- **Next.js**
+  - 採用 File-based routing 架構
+  - 使用 `getServerSideProps` 將 Sanity 的資料預先渲染至頁面（SSR）
 
-使用 Next.js 建構 File-based 路由，並用SSR、SSG的方式將 Sanity_studio 裡的資料渲染在頁面上
+- **Sanity Studio**
+  - 快速搭建可視化 CMS 後台
+  - 只需撰寫 schema，即可在 Studio 中建構與管理資料
+  - 所有商品資訊皆由 Sanity 管理
 
-避免傳遞參數過於複雜，利用useContext來管理狀態
+- **狀態管理**
+  - 使用 `useContext` 管理購物車狀態，避免 props 傳遞過深
 
-目前的功能有
+- **CSS 動畫**
+  - 自行撰寫簡單動畫，提升使用者體驗（如加入購物車時的 Toast 提示）
 
-1.點擊商品進入動態配置路由的商品詳細頁面，點選數量加入購物車，加入成功跳出toast訊息顯示加入其商品 n個成功
+## 前置需求
 
-2.右上角的圖標開啟購物車欄，並可直接在已被加入至此的商品修改數量或直接刪除
+請先安裝 Sanity CLI https://www.sanity.io/docs/getting-started-with-sanity-cli
 
-最近正在嘗試利用Stripe來添加立即購買的功能，希望未來能把這個網站做得更全面
+## 啟動
+
+npm install -g @sanity/cli
+
+npm install
+
+cd sanity_ecommerce
+
+npx sanity start
